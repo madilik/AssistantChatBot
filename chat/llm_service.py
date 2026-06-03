@@ -39,7 +39,7 @@ def generate_llm_response(system_prompt, user_query):
         return "Ошибка настройки: API ключ Gemini не найден."
 
     try:
-        full_prompt = f"{system_prompt}\n\nВопрос пользователя: {user_query}\nОтвет:"
+        full_prompt = f"{system_prompt}\nВОПРОС ПОЛЬЗОВАТЕЛЯ: {user_query}\nОТВЕТ:"
 
         response = client.models.generate_content(
             model='gemini-2.5-flash',
